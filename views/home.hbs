@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head></head>
+<form method = "GET" action = "/image-posts">
+Image Post Title: <input type="text">
+Image 1 URL: <input type="text">
+Image 1 Caption: <input type="text">
+</br>
+Image 2 URL: <input type="text">
+Image 2 Caption: <input type="text">
+</br>
+Image 3 URL: <input type="text">
+Image 3 Caption: <input type="text">
+<input type="submit">
+</form>
+
+{{#each imagepost}}
+	title: {{this.title}}
+	{{#each this.images}}
+		caption: {{this.caption}}
+		url: <img src = {{this.url}} alt = 'there should be an image here' height="<300" width = '<350'>
+	{{/each}}
+{{/each}}
+<img></img>
+</html>
